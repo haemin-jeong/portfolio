@@ -18,6 +18,35 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600;1,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- defer: html파일이 파싱되는 동안 js파일으 동시에 다운 받아서 html파싱이 완료되면 js파일 실행해서 좋다 -->
+    <script src="main.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <!-- NavBar -->
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <img src="imgs/favicon.png" alt="logo" />
+        <a href="#">Jeonghaemin</a>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item">Home</li>
+        <li class="navbar__menu__item">About</li>
+        <li class="navbar__menu__item">Skills</li>
+        <li class="navbar__menu__item">My work</li>
+        <li class="navbar__menu__item">Testimonials</li>
+        <li class="navbar__menu__item">Contact</li>
+      </ul>
+    </nav>
+    <!-- About -->
+    <section id="about"></section>
+    <!-- Skills -->
+    <section id="skills"></section>
+    <!-- Work -->
+    <section id="work"></section>
+    <!-- Testimonials -->
+    <section id="testimonials"></section>
+    <!-- Contact -->
+    <section id="contact"></section>
+  </body>
 </html>
