@@ -159,6 +159,10 @@ p {
 .section {
   text-align: center;
   padding: 40px;
+  margin: auto;
+}
+
+.section__container {
   /* 보통 1000~1200이 데스크탑에서 편하게 볼 수 있는 너비 */
   max-width: 1200px;
   margin: auto;
@@ -226,4 +230,59 @@ p {
 .job__logo {
   width: 100px;
   height: 50px;
+}
+
+#skill {
+  background-color: var(--color-yellow);
+}
+
+.skillset {
+  display: flex;
+  background-color: var(--color-light-grey);
+  color: var(--color-light-white);
+  margin: 20px 0;
+}
+
+.skillset__title {
+  color: var(--color-white);
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-grey);
+}
+
+.skill__value {
+  width: 70%;
+  height: 3px;
+  background-color: var(--color-orange);
+}
+
+.skillset__left {
+  flex-basis: 60%;
+  background-color: var(--color-dark-grey);
+  padding: 20px 40px;
+}
+
+.skill {
+  margin-bottom: 32px;
+}
+
+.skillset__right {
+  flex-basis: 40%;
+}
+
+.tools {
+  background-color: var(--color-grey);
+}
+
+.tools,
+.etc {
+  padding: 20px;
 }
