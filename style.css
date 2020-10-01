@@ -112,10 +112,6 @@ p {
   padding: 8px;
 }
 
-#navbar.navbar--dark .navbar__toggle-btn {
-  top: 14px;
-}
-
 .navbar__menu {
   display: flex;
 }
@@ -403,18 +399,18 @@ p {
 }
 
 .project__description h3 {
-  color: var(--color-white);
+  color: var(--color-orange);
 }
 
 .project__description h3:after {
   content: '';
-  width: 25px;
+  width: 50px;
   height: 2px;
   background-color: var(--color-dark-white);
   display: block;
   position: relative;
   left: 50%;
-  margin-left: -12px;
+  transform: translateX(-50%);
   margin-top: 8px;
 }
 
@@ -523,6 +519,11 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-pink);
+  }
+
+  #navbar.navbar--dark {
+    padding: 16px;
   }
 
   .navbar__menu {
@@ -530,6 +531,10 @@ p {
     text-align: center;
     width: 100%;
     display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
   }
 
   .about__marjors {
