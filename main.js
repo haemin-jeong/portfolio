@@ -12,6 +12,7 @@ document.addEventListener('scroll', () => {
 });
 
 // Handle scrolling when tapping on the navbar menu
+const menuItems = document.querySelectorAll('.navbar__menu__item');
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
   const target = event.target;
@@ -54,7 +55,7 @@ arrowUp.addEventListener('click', () => {
 const workBtnContainer = document.querySelector('.work__categories');
 const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
-
+const categories = document.querySelectorAll('.category__btn');
 workBtnContainer.addEventListener('click', (event) => {
   const filter =
     event.target.dataset.filter || event.target.parentNode.dataset.filter;
@@ -63,6 +64,13 @@ workBtnContainer.addEventListener('click', (event) => {
   if (filter == null) {
     return;
   }
+
+  //Remove selection from the previous item and select the new one
+  const active = document.querySelector('.category__btn.selected');
+  active.classList.remove('selected');
+  const target =
+    event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
+  target.classList.add('selected');
 
   projectContainer.classList.add('anim-out');
 
