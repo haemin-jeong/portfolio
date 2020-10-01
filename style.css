@@ -93,6 +93,9 @@ p {
   margin: 4px 0px;
 }
 
+.scroll_top_btn {
+}
+
 /* Navbar */
 #navbar {
   position: fixed;
@@ -478,6 +481,30 @@ p {
 .contact__links i:hover {
   transform: scale(1.1);
   color: var(--color-yellow);
+}
+
+/* Scroll */
+.arrow-up {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  border-radius: 50%;
+  /* dispaly:none 을 이용하면 docuemnt model에서 사라지기 때문에 애니메이션을 주기 힘들다. 대신에 opacity 사용 */
+  /* display: none; */
+  opacity: 0;
+  /*  투명 상태일때 클릭이 되지앟게 */
+  pointer-events: none;
+  transition: opacity var(--animation-duration) ease-in;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* For below 768px screen width */
